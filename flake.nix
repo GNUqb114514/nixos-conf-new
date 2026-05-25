@@ -15,6 +15,18 @@
       # No other systems or architectures are necessary.
       url = "github:nix-systems/x86_64-linux";
     };
+
+    # Disk management
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Power management
+    watt = {
+      url = "github:NotAShelf/watt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -30,7 +42,17 @@
       { ... }:
       {
         imports = [ ];
-        flake = { };
+        flake = {
+          nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+            };
+            modules = [
+              ./hosts/laptop.nix
+            ];
+          };
+        };
         perSystem =
           { pkgs, ... }:
           {
