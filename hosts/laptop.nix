@@ -1,6 +1,17 @@
 { pkgs, inputs, ... }:
 {
   config = {
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      extraSpecialArgs = {
+        inherit inputs;
+      };
+      users.qb114514.imports = [
+        inputs.users.homeModules.qb114514
+      ];
+    };
+
     networking.hostName = "laptop";
 
     boot.loader = {
@@ -142,5 +153,6 @@
 
     inputs.disko.nixosModules.disko
     inputs.watt.nixosModules.watt
+    inputs.home-manager.nixosModules.home-manager
   ];
 }

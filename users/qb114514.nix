@@ -1,0 +1,23 @@
+{ inputs }:
+{
+  pkgs,
+  ...
+}:
+{
+  home.packages = [ pkgs.wget ];
+
+  home.username = "qb114514";
+  home.homeDirectory = "/home/qb114514";
+
+  programs.git = {
+    enable = true;
+    settings.user = {
+      name = "qb114514";
+      email = "GNUqb114514@outlook.com";
+    };
+  };
+
+  programs.home-manager.enable = true;
+
+  home.stateVersion = "24.11";
+}

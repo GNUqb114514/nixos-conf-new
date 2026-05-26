@@ -16,6 +16,11 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Disk management
     disko = {
       url = "github:nix-community/disko";
@@ -26,6 +31,14 @@
     watt = {
       url = "github:NotAShelf/watt";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # My user configurations
+    users = {
+      url = ./users;
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
     };
   };
 
