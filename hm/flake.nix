@@ -1,5 +1,5 @@
 {
-  description = "My NixOS configuration";
+  description = "My NixOS configuration - Home Manager modules";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
@@ -9,15 +9,7 @@
     };
 
     systems = {
-      url = "github:nix-systems/default";
-    };
-
-    # My Home Manager modules
-    hm = {
-      url = ../hm;
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
+      url = "github:nix-systems/x86_64-linux";
     };
   };
 
@@ -34,10 +26,9 @@
         imports = [ ];
         systems = import systems;
         flake = {
-          homeModules.qb114514 =
-            { pkgs, ... }:
+          homeModules.default =
+            { ... }:
             {
-              imports = [ (import ./qb114514.nix { inherit inputs; }) ];
             };
         };
       }

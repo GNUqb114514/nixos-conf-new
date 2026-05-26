@@ -38,6 +38,33 @@
         "type": "github"
       }
     },
+    "hm": {
+      "inputs": {
+        "flake-parts": [
+          "users",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "users",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "systems"
+        ]
+      },
+      "locked": {
+        "path": "../hm",
+        "type": "path"
+      },
+      "original": {
+        "path": "../hm",
+        "type": "path"
+      },
+      "parent": [
+        "users"
+      ]
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -119,6 +146,7 @@
         "flake-parts": [
           "flake-parts"
         ],
+        "hm": "hm",
         "nixpkgs": [
           "nixpkgs"
         ],
