@@ -19,6 +19,13 @@
 
   programs.home-manager.enable = true;
 
+  user.gui = {
+    niri = {
+      enable = true;
+      xwayland = true;
+    };
+  };
+
   imports = [ inputs.hm.homeModules.default ];
 
   home.stateVersion = "24.11";

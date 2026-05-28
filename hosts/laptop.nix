@@ -12,6 +12,11 @@
       ];
     };
 
+    environment.pathsToLink = [
+      "/share/applications"
+      "/share/xdg-desktop-portal"
+    ];
+
     networking.hostName = "laptop";
 
     boot.loader = {

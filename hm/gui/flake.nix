@@ -1,5 +1,5 @@
 {
-  description = "My NixOS configuration - Home Manager modules";
+  description = "My NixOS configuration - GUI configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
@@ -12,11 +12,9 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
-    guiConfig = {
-      url = ./gui;
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
     };
   };
 
@@ -25,7 +23,6 @@
       nixpkgs,
       flake-parts,
       systems,
-      guiConfig,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (
@@ -34,12 +31,18 @@
         imports = [ ];
         systems = import systems;
         flake = {
-          homeModules.default =
+          homeModules.gui =
             { ... }:
             {
               imports = [
-                guiConfig.homeModules.gui
+                inputs.niri-flake.homeModules.niri
+
+                ./wm.nix
               ];
+
+              config = {
+                xdg.portal.enable = true;
+              };
             };
         };
       }

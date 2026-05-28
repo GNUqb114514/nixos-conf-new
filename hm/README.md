@@ -7,7 +7,7 @@ I am going to make it a subflake to help caching.
 Here are things I'm going to include in this module:
 
 - [ ] GUI stuff
-  - [ ] Window manager. I'm going to choose [niri](https://github.com/niri-wm/niri)
+  - [x] Window manager. I'm going to choose [niri](https://github.com/niri-wm/niri)
   - [ ] [Noctalia](https://github.com/noctalia-dev/noctalia-shell) shell. I'm currently not sure whether I should choose v4 or v5 so I'm going to make it an option.
 	I was using a lot of independent GUI applications but the all-in-one solution, Noctalia, is going to replace all of them. All I need is to reconfigure my Niri keymap so the shortcuts call Noctalia instead of legacy programs. 
 - [ ] Miscellaneous stuff
