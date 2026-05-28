@@ -12,6 +12,7 @@ Here are things I'm going to include in this module:
 	I was using a lot of independent GUI applications but the all-in-one solution, Noctalia, is going to replace all of them. All I need is to reconfigure my Niri keymap so the shortcuts call Noctalia instead of legacy programs. 
 - [ ] Miscellaneous stuff
   - [ ] Browser. I'm going to use Chromium or something similar.
+  - [ ] SSH config so that I don't have to input passwords whenever I use git, which is necessary for Emacs `vc`.
 - [ ] Emacs. I'm going to use the server-client mode so the startup time is not very important. I'm still going to make something lazy so they are not going to affect my startup time.
   - [ ] A library to make life easier. I want to publicate it independently in the future.
   - [ ] Fundamental configurations. Something that I will not use Emacs without.
