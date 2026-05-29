@@ -16,6 +16,11 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia-v5 = {
+      url = "github:noctalia-dev/noctalia-shell?ref=v5";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -23,6 +28,8 @@
       nixpkgs,
       flake-parts,
       systems,
+      niri-flake,
+      noctalia-v5,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (
@@ -36,8 +43,10 @@
             {
               imports = [
                 inputs.niri-flake.homeModules.niri
+                inputs.noctalia-v5.homeModules.default
 
                 ./wm.nix
+                ./bar.nix
               ];
 
               config = {

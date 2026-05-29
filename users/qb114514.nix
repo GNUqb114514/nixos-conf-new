@@ -24,6 +24,12 @@
       enable = true;
       xwayland = true;
     };
+
+    bar = {
+      enable = true;
+      useV5 = true;
+      configuration = true;
+    };
   };
 
   imports = [ inputs.hm.homeModules.default ];
