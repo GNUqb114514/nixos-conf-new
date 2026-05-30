@@ -32,6 +32,8 @@
     };
   };
 
+  user.misc.chromium.enable = true;
+
   imports = [ inputs.hm.homeModules.default ];
 
   home.stateVersion = "24.11";

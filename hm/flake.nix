@@ -35,8 +35,16 @@
         systems = import systems;
         flake = {
           homeModules.default =
-            { ... }:
+            { lib, config, ... }:
             {
+              options.user.misc.chromium = with lib; {
+                enable = mkEnableOption "Chromium";
+              };
+
+              config = lib.mkIf config.user.misc.chromium.enable {
+                programs.chromium.enable = true;
+              };
+
               imports = [
                 guiConfig.homeModules.gui
               ];
