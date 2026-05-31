@@ -14,11 +14,5 @@ Here are things I'm going to include in this module:
   - [x] Browser. I'm going to use Chromium or something similar.
   - [ ] SSH config so that I don't have to input passwords whenever I use git, which is necessary for Emacs `vc`.
 - [ ] Emacs. I'm going to use the server-client mode so the startup time is not very important. I'm still going to make something lazy so they are not going to affect my startup time.
-  - [ ] A library to make life easier. I want to publicate it independently in the future.
-  - [ ] Fundamental configurations. Something that I will not use Emacs without.
-  - [ ] Operation enhancements. Something that make using Emacs easier and faster.
-  - [ ] Coding tools. Including:
-	- [ ] Treesitter and LSP configuration. The state-of-the-art way to configure completion and diagnosis support at present, editor-agnostic.
-	- [ ] Per-language configuration. Mostly minor-mode packages.
 
 Note that this list is not final version; I may change this list whenever I found it necessary. This is also not the same as my previous config; the biggest modification is the absence of Neovim (being replaced by Emacs).
