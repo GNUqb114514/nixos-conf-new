@@ -34,6 +34,11 @@
 
   user.misc.chromium.enable = true;
 
+  user.emacs = {
+    enable = true;
+    pgtk = true;
+  };
+
   imports = [ inputs.hm.homeModules.default ];
 
   home.stateVersion = "24.11";

@@ -18,6 +18,13 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.systems.follows = "systems";
     };
+
+    emacsConfig = {
+      url = ./emacs;
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
   };
 
   outputs =
@@ -26,6 +33,7 @@
       flake-parts,
       systems,
       guiConfig,
+      emacsConfig,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (
@@ -47,6 +55,7 @@
 
               imports = [
                 guiConfig.homeModules.gui
+                emacsConfig.homeModules.emacs
               ];
             };
         };

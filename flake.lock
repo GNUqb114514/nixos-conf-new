@@ -20,6 +20,37 @@
         "type": "github"
       }
     },
+    "emacsConfig": {
+      "inputs": {
+        "flake-parts": [
+          "users",
+          "hm",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "users",
+          "hm",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "hm",
+          "systems"
+        ]
+      },
+      "locked": {
+        "path": "emacs",
+        "type": "path"
+      },
+      "original": {
+        "path": "emacs",
+        "type": "path"
+      },
+      "parent": [
+        "users",
+        "hm"
+      ]
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -73,6 +104,7 @@
     },
     "hm": {
       "inputs": {
+        "emacsConfig": "emacsConfig",
         "flake-parts": [
           "users",
           "flake-parts"
