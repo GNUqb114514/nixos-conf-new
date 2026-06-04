@@ -8,8 +8,8 @@ Here are things I'm going to include in this module:
 
 - [ ] Fundamental configurations. Something that I will not use Emacs without.
   - [ ] Font configuration
-  - [ ] Miscellaneous configurations I'm sure to copy from my old configuration.
-  - [ ] Split threshold
+  - [x] Miscellaneous configurations I'm sure to copy from my old configuration.
+  - [x] Split threshold
 - [ ] Operation enhancements. Something that make using Emacs easier and faster.
   - [ ] Keymappings
 	- [ ] `keyfreq`, so I can tweak my configurations based on real statistics instead of make up one.
