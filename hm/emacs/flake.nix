@@ -104,6 +104,7 @@
 
               imports = [
                 ./emacs.nix
+                ./operations.nix
               ];
 
               config = lib.mkIf cfg.enable {
@@ -129,8 +130,8 @@
                       { name, value }:
                       let
                         bindSpec = mapping: args: ''
-                          :bind (${if map != null then ":map ${mapping}" else "; Global Mapping"}
-                          ${lib.concatMapAttrsStringSep "" (key: val: "${key} . ${val}") args})
+                          :bind (${if mapping != "_" then ":map ${mapping}" else "; Global Mapping"}
+                          ${lib.concatMapAttrsStringSep "" (key: val: "(\"${key}\" . ${val})") args})
                         '';
                       in
                       ''
