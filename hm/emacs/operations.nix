@@ -17,10 +17,11 @@
       custom = {
         keyfreq-excluded-commands = ''
           '(self-insert-command
-                                                  forward-char
-                                                  backward-char
-                                                  previous-line
-                                                  next-line)'';
+            forward-char
+            backward-char
+            previous-line
+            next-line)
+        '';
       };
     };
     mwim = {

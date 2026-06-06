@@ -118,13 +118,11 @@
                   package = lib.mkIf cfg.pgtk pkgs.emacs-pgtk;
                   extraPackages =
                     epkgs:
-                    (
-                      builtins.filter (a: a != null) (
-                        lib.concatMap (
-                          { name, value }: if value.package == null then [ epkgs.${name} ] else [ (value.package epkgs) ]
-                        ) (lib.attrsToList cfg.plugins)
-                      )
-                    );
+                    (builtins.filter (a: a != null) (
+                      lib.concatMap (
+                        { name, value }: if value.package == null then [ epkgs.${name} ] else [ (value.package epkgs) ]
+                      ) (lib.attrsToList cfg.plugins)
+                    ));
                   extraConfig = (
                     lib.concatMapStringsSep "\n" (
                       { name, value }:
