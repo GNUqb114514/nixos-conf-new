@@ -12,11 +12,11 @@ Here are things I'm going to include in this module:
   - [x] Split threshold
 - [ ] Operation enhancements. Something that make using Emacs easier and faster.
   - [ ] Keymappings
-	- [ ] `keyfreq`, so I can tweak my configurations based on real statistics instead of make up one.
-	- [ ] `mwim` to enhance `C-a` and `C-e`
+	- [x] `keyfreq`, so I can tweak my configurations based on real statistics instead of make up one.
+	- [x] `mwim` to enhance `C-a` and `C-e`
 	- [ ] `helpful` to enhance `C-h`s.
   - [ ] Operations on texts
-	- [ ] `separedit.el`
+	- [x] `separedit.el`
 	- [ ] `query-replace` enhancement
   - [ ] Minibuffer-related plugins
 - [ ] Coding tools
