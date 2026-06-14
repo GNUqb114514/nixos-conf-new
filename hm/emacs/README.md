@@ -22,7 +22,7 @@ Here are things I'm going to include in this module:
 - [ ] Coding tools
   - [ ] Project and environment management
 	- [x] `ben.el` support. It is an emacs tool to load direnv  `.envrc` files buffer-locally, which is important for my workflow which heavily uses direnv to manage per-project environment.
-	- [ ] `project` configurations.
+	- [x] `project` configurations.
   - [ ] Completion support.
 	- [ ] Yasnippet *without* yasnippet-snippets. The latter is too heavy for me.
 	  - [ ] As well as some curated snippets.
