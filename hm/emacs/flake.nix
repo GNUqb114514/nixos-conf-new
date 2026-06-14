@@ -105,6 +105,7 @@
               imports = [
                 ./emacs.nix
                 ./operations.nix
+                ./coding
               ];
 
               config = lib.mkIf cfg.enable {
